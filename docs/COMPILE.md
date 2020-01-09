@@ -1,5 +1,7 @@
 # OpenALPR
 
+<sub>
+
 ## Compilando
 
 Compilando o [Open ALPR](https://www.openalpr.com/) para reconhecer placar BR.
@@ -13,7 +15,7 @@ Compilando o [Open ALPR](https://www.openalpr.com/) para reconhecer placar BR.
 ## Executando
 
 Para executar o OpenALPR, basta chamar
-`$ alpr -c br <img>`
+`alpr -c br <img>`
 onde:
 > `-c br` indica o país da placa a ser analisada
 > `<img>` caminho para a imagem
@@ -26,6 +28,6 @@ import subprocess
 subprocess.run(["alpr", "-c", "br", "/home/mauricio/002.jpg"])
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTYwOTEyMjIsMTE3MzUyNDEzMCwxMT
-czNTI0MTMwLC0yMzMxNTMzOTJdfQ==
+eyJoaXN0b3J5IjpbLTk4NzQ0OTU3NiwxMTczNTI0MTMwLDExNz
+M1MjQxMzAsLTIzMzE1MzM5Ml19
 -->

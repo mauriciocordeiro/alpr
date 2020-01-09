@@ -1,4 +1,4 @@
-# Compile
+# OpenALPR
 
 <sub>[Compilando](#compilando)</sub><br>
 <sub>[Executando](#executando)</sub><br>
@@ -31,5 +31,6 @@ import subprocess
 subprocess.run(["alpr", "-c", "br", "/home/mauricio/002.jpg"])
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDI4MTkzMTUsMTI0NjkyODYxNV19
+eyJoaXN0b3J5IjpbMTI0NjkyODYxNSwtMTE0MjgxOTMxNSwxMj
+Q2OTI4NjE1XX0=
 -->

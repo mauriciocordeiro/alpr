@@ -1,4 +1,6 @@
-# Compilando o [Open ALPR](https://www.openalpr.com/) para reconhecer placar BR.
+# OpenALPR
+
+Compilando o [Open ALPR](https://www.openalpr.com/) para reconhecer placar BR.
 
 1. Compilar segundo o [_The Easyest Way_](https://github.com/openalpr/openalpr/wiki/Compilation-instructions-(Ubuntu-Linux)#the-easiest-way);
 
@@ -14,5 +16,5 @@
 
 ================================================================================
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzMzE1MzM5Ml19
+eyJoaXN0b3J5IjpbLTM4MTc3OTA2MSwtMjMzMTUzMzkyXX0=
 -->

@@ -8,13 +8,12 @@ Compilando o [Open ALPR](https://www.openalpr.com/) para reconhecer placar BR.
 
 3. Seja feliz.
 
-================================================================================
+## Executando comando shell no Python
 
-# executando comando shell no python
->>> import subprocess
->>> subprocess.run(["alpr", "-c", "br", "/home/mauricio/002.jpg"])
-
-================================================================================
+```
+import subprocess
+subprocess.run(["alpr", "-c", "br", "/home/mauricio/002.jpg"])
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4MTc3OTA2MSwtMjMzMTUzMzkyXX0=
+eyJoaXN0b3J5IjpbMjU4MDQ5MTQwLC0yMzMxNTMzOTJdfQ==
 -->

@@ -1,6 +1,7 @@
 # OpenALPR
 
-<sub> * 
+<sub>- [Compilando](#compilando)<br>
+<sub>- [Executando no Python](#executando)<br>
 
 ## Compilando
 
@@ -20,7 +21,7 @@ onde:
 > `-c br` indica o país da placa a ser analisada
 > `<img>` caminho para a imagem
 
-## Executando comando shell no Python
+## Executando no Python
 
 ```
 # chamando OpenALPR no Python
@@ -28,6 +29,6 @@ import subprocess
 subprocess.run(["alpr", "-c", "br", "/home/mauricio/002.jpg"])
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzcxMDQ2MDIsMTE3MzUyNDEzMCwxMT
-czNTI0MTMwLC0yMzMxNTMzOTJdfQ==
+eyJoaXN0b3J5IjpbLTUyODYxNTY0NiwxMTczNTI0MTMwLDExNz
+M1MjQxMzAsLTIzMzE1MzM5Ml19
 -->

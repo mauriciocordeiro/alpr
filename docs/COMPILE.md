@@ -1,6 +1,6 @@
 # OpenALPR
 
-Compilando o [Open ALPR](https://www.openalpr.com/) para reconhecer placar BR.
+#### Compilando o [Open ALPR](https://www.openalpr.com/) para reconhecer placar BR.
 
 1. Compilar segundo o [_The Easyest Way_](https://github.com/openalpr/openalpr/wiki/Compilation-instructions-(Ubuntu-Linux)#the-easiest-way);
 
@@ -16,5 +16,6 @@ import subprocess
 subprocess.run(["alpr", "-c", "br", "/home/mauricio/002.jpg"])
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3MzUyNDEzMCwtMjMzMTUzMzkyXX0=
+eyJoaXN0b3J5IjpbLTEwMjUwODIwOTAsMTE3MzUyNDEzMCwtMj
+MzMTUzMzkyXX0=
 -->

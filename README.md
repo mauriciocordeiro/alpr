@@ -4,9 +4,9 @@ Compilando e treinando o [OpenALPR](https://github.com/openalpr/openalpr).
 
 ## Docs
 
-* [Compilando](/alpr/docs/compile)
-* [Treinando](/alpr/docs/training)
+* [Compilando](docs/compile)
+* [Treinando](docs/training)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3MTEwMDIyNywtMTcyNjIyNjU0NSwxOT
-U4OTgyNDc4LC0xMzA5MzEwMjA4XX0=
+eyJoaXN0b3J5IjpbLTY4ODAwNDAwMywtOTcxMTAwMjI3LC0xNz
+I2MjI2NTQ1LDE5NTg5ODI0NzgsLTEzMDkzMTAyMDhdfQ==
 -->

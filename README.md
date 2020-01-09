@@ -4,8 +4,9 @@ Building [OpenALPR](https://github.com/openalpr/openalpr).
 
 ## Docs
 
-* [Compile](/alpr/docs/compile)
-* [Training](/alpr/docs/training)
+* [Compilando](/alpr/docs/compile)
+* [Treinando](/alpr/docs/training)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1ODk4MjQ3OCwtMTMwOTMxMDIwOF19
+eyJoaXN0b3J5IjpbLTE3MjYyMjY1NDUsMTk1ODk4MjQ3OCwtMT
+MwOTMxMDIwOF19
 -->

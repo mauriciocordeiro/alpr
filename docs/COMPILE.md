@@ -1,8 +1,8 @@
 # OpenALPR
 
-<sub>- [Compilando](#compilando)</sub><br>
-<sub>- [Executando](#executando)</sub><br>
-<sub>- [Executando no Python](#executando-no-python)</sub><br>
+<sub>[Compilando](#compilando)</sub>
+<sub>[Executando](#executando)</sub>
+<sub>____ [Executando no Python](#executando-no-python)</sub>
 
 ## Compilando
 
@@ -30,6 +30,6 @@ import subprocess
 subprocess.run(["alpr", "-c", "br", "/home/mauricio/002.jpg"])
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2NDI0MjYxMiwxMTczNTI0MTMwLDExNz
+eyJoaXN0b3J5IjpbMTgwNjM5ODY1MywxMTczNTI0MTMwLDExNz
 M1MjQxMzAsLTIzMzE1MzM5Ml19
 -->

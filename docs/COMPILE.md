@@ -11,9 +11,10 @@ Compilando o [Open ALPR](https://www.openalpr.com/) para reconhecer placar BR.
 ## Executando comando shell no Python
 
 ```
+# chamando OpenALPR no Python
 import subprocess
 subprocess.run(["alpr", "-c", "br", "/home/mauricio/002.jpg"])
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU4MDQ5MTQwLC0yMzMxNTMzOTJdfQ==
+eyJoaXN0b3J5IjpbMTE3MzUyNDEzMCwtMjMzMTUzMzkyXX0=
 -->

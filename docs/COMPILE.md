@@ -2,7 +2,7 @@
 
 <sub>[Compilando](#compilando)</sub>
 <sub>[Executando](#executando)</sub>
-<sub>____ [Executando no Python](#executando-no-python)</sub>
+<sub><sub>[Executando no Python](#executando-no-python)</sub></sub>
 
 ## Compilando
 
@@ -30,6 +30,6 @@ import subprocess
 subprocess.run(["alpr", "-c", "br", "/home/mauricio/002.jpg"])
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwNjM5ODY1MywxMTczNTI0MTMwLDExNz
+eyJoaXN0b3J5IjpbLTE1MTM0NTAxOCwxMTczNTI0MTMwLDExNz
 M1MjQxMzAsLTIzMzE1MzM5Ml19
 -->

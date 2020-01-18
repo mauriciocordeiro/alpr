@@ -6,9 +6,9 @@
 ## OCR
 
 ## Detector
-* [OpenALPR Documentation#Training Detector](https://github.com/mauriciocordeiro/alpr)
+* [OpenALPR Documentation#Training Detector](http://doc.openalpr.com/opensource.html#training-the-detector)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjY1ODMyMjYsLTE2MzUyNTc1MzMsLT
-cwODY4NDQzMV19
+eyJoaXN0b3J5IjpbLTIxMjMyODY1NTcsLTEyNjY1ODMyMjYsLT
+E2MzUyNTc1MzMsLTcwODY4NDQzMV19
 -->

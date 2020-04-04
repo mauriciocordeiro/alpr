@@ -3,6 +3,7 @@
 <sub>[Compilando](#compilando)</sub><br>
 <sub>[Executando](#executando)</sub><br>
 <sub><sub>[Executando no Python](#executando-no-python)</sub></sub><br>
+<sub><sub>[Executando no Java](#executando-no-java)</sub></sub><br>
 
 ## Compilando
 

@@ -35,7 +35,7 @@ subprocess.run(["alpr", "-c", "br", "/home/mauricio/002.jpg"])
 ### Executando no Java
 
 ```java
-// chamando o OpenALOP no Java
+// chamando o OpenALPR no Java
 	public static String alpr() {
 		try {
 			

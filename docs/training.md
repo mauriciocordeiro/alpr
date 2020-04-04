@@ -4,6 +4,7 @@
 <sub>[Detector](#detector)</sub><br>
 
 ## OCR
+_it is  already done_
 
 ## Detector
 * [OpenALPR Documentation#Training Detector](http://doc.openalpr.com/opensource.html#training-the-detector)

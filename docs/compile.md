@@ -36,37 +36,37 @@ subprocess.run(["alpr", "-c", "br", "/home/mauricio/002.jpg"])
 
 ```java
 // chamando o OpenALPR no Java
-	public static String alpr() {
-		try {
-			
-			ProcessBuilder builder = new ProcessBuilder("wsl", "alpr", "-j");
-			builder.redirectErrorStream(true);
-			final Process process = builder.start();
+public static String alpr() {
+	try {
 
-			watch(process);
-			
-			return "done";
-		} catch(Exception e) {
-			e.printStackTrace(System.out);
-			return null;
+		ProcessBuilder builder = new ProcessBuilder("wsl", "alpr", "-j");
+		builder.redirectErrorStream(true);
+		final Process process = builder.start();
+
+		watch(process);
+
+		return "done";
+	} catch(Exception e) {
+		e.printStackTrace(System.out);
+		return null;
+	}
+}
+
+private static void watch(final Process process) {
+    new Thread() {
+	public void run() {
+	    BufferedReader input = new BufferedReader(new InputStreamReader(process.getInputStream()));
+	    String line = null; 
+	    try {
+		while ((line = input.readLine()) != null) {
+		    System.out.println(line);
 		}
+	    } catch (IOException e) {
+		e.printStackTrace();
+	    }
 	}
-	
-	private static void watch(final Process process) {
-	    new Thread() {
-	        public void run() {
-	            BufferedReader input = new BufferedReader(new InputStreamReader(process.getInputStream()));
-	            String line = null; 
-	            try {
-	                while ((line = input.readLine()) != null) {
-	                    System.out.println(line);
-	                }
-	            } catch (IOException e) {
-	                e.printStackTrace();
-	            }
-	        }
-	    }.start();
-	}
+    }.start();
+}
 
 ```
 

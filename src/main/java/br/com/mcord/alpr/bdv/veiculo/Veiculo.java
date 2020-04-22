@@ -7,11 +7,16 @@ import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import br.com.mcord.alpr.bdv.restricao.Restricao;
 
@@ -19,7 +24,7 @@ import br.com.mcord.alpr.bdv.restricao.Restricao;
 @Table(name = "bdv_veiculo")
 public class Veiculo implements Serializable {
 	
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 5235678677252215476L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

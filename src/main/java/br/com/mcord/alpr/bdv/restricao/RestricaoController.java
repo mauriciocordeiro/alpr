@@ -1,5 +1,9 @@
 package br.com.mcord.alpr.bdv.restricao;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,6 +14,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.mcord.alpr.bdv.veiculo.Veiculo;
+import br.com.mcord.alpr.bdv.veiculo.VeiculoRepository;
+
 @RestController
 @RequestMapping("/api/veiculos")
 public class RestricaoController {
@@ -17,9 +24,28 @@ public class RestricaoController {
 	@Autowired
 	RestricaoRepository restricaoRepository;
 	
+	@Autowired
+	VeiculoRepository veiculoRepository;
+	
 	@GetMapping("/{id}/restricoes")
-	public ResponseEntity<Restricao> getAllRestricoes(@PathVariable("id") int cdVeiculo) {
-		return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+	public ResponseEntity<List<Restricao>> getAllRestricoes(@PathVariable("id") int cdVeiculo) {
+		try {
+			Optional<Veiculo> veiculoData = veiculoRepository.findById(cdVeiculo);
+			
+			if(veiculoData.isPresent()) {
+				List<Restricao> restricoes = new ArrayList<Restricao>();
+				restricaoRepository.findAllByCdVeiculo(cdVeiculo).forEach(restricoes::add);
+				
+				if(restricoes.isEmpty())
+					return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+				
+				return new ResponseEntity<>(restricoes, HttpStatus.OK);
+			} else {
+				return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+			}
+		} catch (Exception e) {
+			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+		}
 	}
 	
 	@GetMapping("/{id}/restricoes/{idRestricoes}")
@@ -29,7 +55,20 @@ public class RestricaoController {
 	
 	@PostMapping("/{id}/restricoes")
 	public ResponseEntity<Restricao> createRestricao(@PathVariable("id") int cdVeiculo, @RequestBody Restricao restricao) {
-		return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+		try {
+			
+			Veiculo veiculo = veiculoRepository.getOne(cdVeiculo);
+			if(veiculo == null)
+				return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+			
+			restricao.setVeiculo(veiculo);
+			
+			Restricao _restricao = restricaoRepository.save(restricao);
+			
+			return new ResponseEntity<>(_restricao, HttpStatus.CREATED);
+		} catch (Exception e) {
+			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+		}
 	}
 
 }

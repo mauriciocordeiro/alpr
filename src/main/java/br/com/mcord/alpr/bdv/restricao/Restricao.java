@@ -12,6 +12,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import br.com.mcord.alpr.bdv.veiculo.Veiculo;
 
 @Entity
@@ -37,6 +39,10 @@ public class Restricao implements Serializable {
 	@Column(name = "dt_restricao")
 	private LocalDate dtRestricao;
 	
+	@Column(name = "cd_veiculo", insertable = false, updatable = false)
+	private int cdVeiculo;
+	
+	@JsonIgnore
 	@ManyToOne
 	@JoinColumn(name = "cd_veiculo")
 	private Veiculo veiculo;
@@ -93,6 +99,14 @@ public class Restricao implements Serializable {
 
 	public void setDtRestricao(LocalDate dtRestricao) {
 		this.dtRestricao = dtRestricao;
+	}
+	
+	public int getCdVeiculo() {
+		return cdVeiculo;
+	}
+
+	public void setCdVeiculo(int cdVeiculo) {
+		this.cdVeiculo = cdVeiculo;
 	}
 
 	public Veiculo getVeiculo() {

@@ -1,7 +1,7 @@
 package br.com.mcord.alpr.bdv.restricao;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 
-public interface RestricaoRepository extends JpaRepository<Restricao, Integer> {
+public interface RestricaoRepository extends CrudRepository<Restricao, Integer> {
 
 }

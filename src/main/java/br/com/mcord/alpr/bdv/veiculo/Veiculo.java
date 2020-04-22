@@ -1,18 +1,26 @@
-package br.com.mcord.alpr.bdv;
+package br.com.mcord.alpr.bdv.veiculo;
 
+import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import br.com.mcord.alpr.bdv.restricao.Restricao;
 
 @Entity
 @Table(name = "bdv_veiculo")
-public class Veiculo {
+public class Veiculo implements Serializable {
 	
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "cd_veiculo")
@@ -74,6 +82,9 @@ public class Veiculo {
 	
 	@Column(name = "nr_chassi")
 	private String nrChassi;
+	
+	@OneToMany(mappedBy = "veiculo", cascade = CascadeType.ALL)
+	private Set<Restricao> restricoes;
 	
 	public Veiculo() {}
 	
@@ -263,6 +274,18 @@ public class Veiculo {
 	public void setNrChassi(String nrChassi) {
 		this.nrChassi = nrChassi;
 	}
+	
+	public Set<Restricao> getRestricoes() {
+		return restricoes;
+	}
+
+	public void setRestricoes(Set<Restricao> restricoes) {
+		this.restricoes = restricoes;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 
 	@Override
 	public String toString() {
@@ -274,6 +297,33 @@ public class Veiculo {
 				+ ", nmEspecie=" + nmEspecie + ", nmTipo=" + nmTipo + ", nmCategoria=" + nmCategoria + ", dtInformacao="
 				+ dtInformacao + ", nrChassi=" + nrChassi + "]";
 	}
+
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		return new Veiculo(
+				this.getCdVeiculo(), 
+				this.getNrPlaca(), 
+				this.getNrRenavan(), 
+				this.getTpVeiculo(), 
+				this.getTpVeiculo(), 
+				this.getNrAnoModelo(), 
+				this.getNrAnoFabricacao(), 
+				this.getNrCodigoMunicipio(), 
+				this.getNmMunicipio(), 
+				this.getSgEstado(), 
+				this.getNrCodigoMarca(), 
+				this.getNmMarcaModelo(), 
+				this.getNrCodigoCor(), 
+				this.getNmCor(), 
+				this.getNrCodigoEspecie(), 
+				this.getNmEspecie(), 
+				this.getNmTipo(), 
+				this.getNmCategoria(), 
+				this.getDtInformacao(), 
+				this.getNrChassi());
+	}
+	
+	
 	
 	
 

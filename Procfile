@@ -1,1 +1,1 @@
-web: java -jar target/alpr.jar
+web: java -jar target/alpr.war

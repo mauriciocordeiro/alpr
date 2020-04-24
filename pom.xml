@@ -11,7 +11,7 @@
 	<groupId>br.com.mcord</groupId>
 	<artifactId>alpr</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-<!-- 	<packaging>war</packaging> -->
+	<packaging>war</packaging>
 	<name>alpr</name>
 	<description>Automatic License Plate Recognition</description>
 	

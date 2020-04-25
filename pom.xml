@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.mcord</groupId>
-	<artifactId>alpr4j</artifactId>
+	<artifactId>alpr</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-<!-- 	<packaging>war</packaging> -->
-	<name>alpr4j</name>
+	<packaging>war</packaging>
+	<name>alpr</name>
 	<description>Automatic License Plate Recognition</description>
 	
 	<properties>

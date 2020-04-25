@@ -1,4 +1,4 @@
-package br.com.mcord.alpr.bdv.restricao;
+package br.com.mcord.alpr.bdv.model;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -13,8 +13,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
-import br.com.mcord.alpr.bdv.veiculo.Veiculo;
 
 @Entity
 @Table(name = "bdv_restricao")

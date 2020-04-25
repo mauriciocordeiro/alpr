@@ -1,4 +1,4 @@
-package br.com.mcord.alpr.bdv.veiculo;
+package br.com.mcord.alpr.bdv.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +17,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.mcord.alpr.bdv.restricao.Restricao;
+import br.com.mcord.alpr.bdv.model.Restricao;
+import br.com.mcord.alpr.bdv.model.Veiculo;
+import br.com.mcord.alpr.bdv.repository.VeiculoRepository;
 
 @RestController
 @RequestMapping("/api/veiculos")
@@ -64,7 +66,7 @@ public class VeiculoController {
 	@PostMapping("")
 	public ResponseEntity<Veiculo> createVeiculo(@RequestBody Veiculo veiculo) {
 		try {
-			Veiculo _veiculo = veiculoRepository.save((Veiculo)veiculo.clone());
+			Veiculo _veiculo = veiculoRepository.save(veiculo);
 			
 			return new ResponseEntity<>(_veiculo, HttpStatus.CREATED);
 		} catch (Exception e) {
@@ -78,7 +80,7 @@ public class VeiculoController {
 			Optional<Veiculo> veiculoData = veiculoRepository.findById(cdVeiculo);
 			
 			if(veiculoData.isPresent()) {
-				return new ResponseEntity<>(veiculoRepository.save((Veiculo)veiculo.clone()), HttpStatus.OK);
+				return new ResponseEntity<>(veiculoRepository.save(veiculo), HttpStatus.OK);
 			} else {
 				return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 			}

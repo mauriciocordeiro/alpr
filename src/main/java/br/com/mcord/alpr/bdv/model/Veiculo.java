@@ -325,9 +325,4 @@ public class Veiculo implements Serializable {
 				this.getDtInformacao(), 
 				this.getNrChassi());
 	}
-	
-	
-	
-	
-
 }

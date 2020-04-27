@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.mcord.alpr.bdv.model.Restricao;
 import br.com.mcord.alpr.bdv.model.Veiculo;
 import br.com.mcord.alpr.bdv.repository.VeiculoRepository;
 

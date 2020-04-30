@@ -1,4 +1,4 @@
-package br.com.mcord.alpr.bdv.model;
+package br.com.mcord.alpr.model;
 
 import java.io.Serializable;
 import java.time.LocalDate;

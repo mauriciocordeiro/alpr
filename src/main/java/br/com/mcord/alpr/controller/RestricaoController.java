@@ -1,4 +1,4 @@
-package br.com.mcord.alpr.bdv.controller;
+package br.com.mcord.alpr.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.mcord.alpr.bdv.model.Restricao;
-import br.com.mcord.alpr.bdv.model.Veiculo;
-import br.com.mcord.alpr.bdv.repository.RestricaoRepository;
-import br.com.mcord.alpr.bdv.repository.VeiculoRepository;
+import br.com.mcord.alpr.model.Restricao;
+import br.com.mcord.alpr.model.Veiculo;
+import br.com.mcord.alpr.repository.RestricaoRepository;
+import br.com.mcord.alpr.repository.VeiculoRepository;
 
 @RestController
 @RequestMapping("/api/veiculos")

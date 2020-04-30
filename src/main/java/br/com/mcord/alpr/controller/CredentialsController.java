@@ -23,10 +23,10 @@ public class CredentialsController {
 	@Autowired
 	UsuarioRepository usuarioRepository;
 	
-	@Value("${jwt.secret}")
+	@Value("${br.com.mcord.alpr.jwt.secret}")
 	private String jwtSecret;
 	
-	@Value("${jwt.exp}")
+	@Value("${br.com.mcord.alpr.jwt.exp}")
 	private long jwtExp;
 	
 	@PostMapping("/login")

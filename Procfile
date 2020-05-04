@@ -1,1 +1,1 @@
-java -war
+java -jar
